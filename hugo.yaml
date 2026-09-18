@@ -1,7 +1,7 @@
-title: Huijie-Lian # (填写) 左上角以及浏览器Tab标题
+title: "Huijie Lian" # (填写) 左上角以及浏览器Tab标题
 theme: ["PaperMod"]
 #netlify用
-baseURL: "https://yaolu.netlify.app" # (填写) netlify有网址了之后填写即可
+baseURL: "https://hjlian.netlify.app" # (填写) netlify有网址了之后填写即可
 enableRobotsTXT: true # 启用 robots.txt
 enableEmoji: true # 启用 emoji 支持
 minify:
@@ -10,8 +10,9 @@ minify:
 
 # PaperMod 主题配置
 params:
-  author: "hjlian" #(填写) 
-  description: "你的网站描述" #(填写) eg. phd/grad student researcher
+  author: "连慧婕/Huijie Lian" #(填写) 
+  description: "I am a second-year PhD student at Southeast University. My research focuses on theoretical and computational studies of condensed matter physics, with particular interests in low-dimensional magnetism, topological materials, and ferroelectric materials.
+" #(填写) eg. phd/grad student researcher
   
   # 显示设置
   ShowReadingTime: false      # 显示阅读时间
