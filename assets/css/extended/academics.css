@@ -1,0 +1,92 @@
+.pub-entry {
+    position: relative;
+    display: flex;
+    margin-bottom: var(--gap);
+    padding: var(--gap);
+    background: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.pub-entry a:hover {
+    text-decoration: underline;
+}
+
+.pub-entry .entry-cover {
+    margin: auto 3% auto 0;
+    flex: 2;
+}
+
+.pub-entry .entry-content {
+    -webkit-line-clamp: 5;
+}
+
+.venue {
+    margin-top: 0.5em;
+    color: #3498db;
+}
+
+.author-me {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.venue strong,
+.venue b {
+    color: #a67c00;
+}
+
+.pub-meta {
+    margin-top: auto;
+    margin-bottom: auto;
+    flex: 5;
+}
+
+.inline-svg {
+    display: inline-block;
+    height: 0.9rem;
+    width: 0.9rem;
+    bottom: -0.2rem;
+    position: relative;
+    margin: 0.2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .pub-entry .entry-cover {
+        margin: auto 5% auto 0;
+        flex: 3;
+    }
+}
+
+.row {
+    display: flex;
+}
+
+.profile-text {
+    text-align: left;
+    flex: 1;
+}
+
+.profile-text p {
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+.profile-img {
+    margin-left: 5%;
+}
+
+.profile-img img {
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .profile-img {
+        display: none;
+    }
+}
+
+.home-info .buttons {
+    justify-content: flex-start;
+    margin-top: 1rem;
+}

@@ -1,0 +1,11 @@
+# Temporary lock file while building
+.hugo_build.lock
+
+# Generated site output
+public/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+
