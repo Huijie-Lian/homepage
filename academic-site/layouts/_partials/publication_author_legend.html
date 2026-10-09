@@ -1,0 +1,8 @@
+{{- $equal := .Params.equal_contributors -}}
+{{- $corresponding := .Params.corresponding_authors -}}
+{{- if or $equal $corresponding -}}
+<p class="academic-author-legend">
+  {{- if $equal -}}<span>† {{ if eq site.Language.Lang "zh" }}共同第一作者{{ else }}Co-first authors (equal contribution){{ end }}</span>{{- end -}}
+  {{- if $corresponding -}}<span>* {{ if eq site.Language.Lang "zh" }}通讯作者{{ else }}Corresponding authors{{ end }}</span>{{- end -}}
+</p>
+{{- end -}}

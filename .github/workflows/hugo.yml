@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.161.1
+      HUGO_VERSION: 0.166.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -41,19 +41,26 @@ jobs:
         run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: academic-site/package-lock.json
       - name: Install Node.js dependencies
-        run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+        working-directory: academic-site
+        run: npm ci
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
         run: |
           hugo \
+            --source academic-site \
+            --destination ../public \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact

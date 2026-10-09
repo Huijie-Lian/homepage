@@ -11,9 +11,8 @@ minify:
 # PaperMod 主题配置
 params:
   author: "连慧婕/Huijie Lian" #(填写) 
-  description: "I am a second-year PhD student at Southeast University. My research focuses on theoretical and computational studies of condensed matter physics, with particular interests in low-dimensional magnetism, topological materials, and ferroelectric materials.
-" #(填写) eg. phd/grad student researcher
-  
+  description: "连慧婕，东南大学物理学院博士二年级学生，2025年9月入学。"
+
   # 显示设置
   ShowReadingTime: false      # 显示阅读时间
   ShowShareButtons: false     # 显示分享按钮
@@ -24,46 +23,19 @@ params:
   displayFullLangName: true  # 显示语言全称
   ShowOnlySelectedPubs: true # 首页仅展示 selected: true 的论文（设为 false 展示全部）
   homeInfoParams:
-    imageUrl: "/images/portrait.png"  # (填写) 头像路径，把图片放到static/images文件夹下并命名为portrait.png
-    imageWidth: 120
-    imageHeight: 120
-    imageTitle: my portrait
-    # 可选按钮
+    imageUrl: "/images/portrait.jpg"  # (填写) 头像路径，照片位于static/images/portrait.jpg
+    imageWidth: 250
+    imageHeight: 350
+    imageTitle: Huijie Lian
     buttons:
-      - name: CV
-        url: /cv.pdf # (填写) 把图片放到static/文件夹下，命名为cv.pdf
-      - name: Google Scholar
-        url: "https://scholar.google.com/citations?user=xxxx" # (填写) 
-#      - name: ORCID
-#        url: "https://orcid.org/0000-0000-0000-0000"
-#      - name: GitHub
-#        url: "https://github.com/yourname"
-#      - name: Research Group Homepage
-#        url: "https://yourgroup.example.com"
+      - name: GitHub
+        url: "https://github.com/Huijie-Lian/homepage"
 
   # 可选图标链接
   socialIcons:
-    - name: github
-      url: "https://github.com/yourname" # (填写) 
-      title: "GitHub"
     - name: email
-      url: "mailto:your@email.com" # (填写) 
-      title: "email"
-#    - name: linkedin
-#      url: "https://www.linkedin.com/in/yourname"
-#      title: "LinkedIn"
-#    - name: x
-#      url: "https://x.com/yourname"
-#      title: "X"
-#    - name: instagram
-#      url: "https://www.instagram.com/yourname"
-#      title: "Instagram"
-#    - name: orcid
-#      url: "https://orcid.org/0000-0000-0000-0000"
-#      title: "ORCID"
-#    - name: googlescholar
-#      url: "https://scholar.google.com/citations?user=xxxx"
-#      title: "Google Scholar"
+      url: "mailto:230259170@seu.edu.cn"
+      title: "Email"
 
 # 语言设置、分语言的菜单设置
 defaultContentLanguage: zh
@@ -78,12 +50,14 @@ languages:
     params:
       homeInfoParams:
         # 中文首页标题  (填写) 
-        Title: "姓名 / Your Name"
+        Title: "连慧婕 / Huijie Lian"
         # 中文首页自我介绍，markdown格式  (填写) 
         Content: |
-          (Example 1) I am a second-year PhD student at the University of California Merced advised by Prof. Ming-Hsuan Yang. My current research topics are in image and video generation. I’m interested in developing interactable visual intelligence.
-          
-          Before my PhD journey, I also worked on visual-language learning with Prof. Winston Hsu at National Taiwan University.
+          东南大学物理学院博士二年级
+
+          邮箱：[230259170@seu.edu.cn](mailto:230259170@seu.edu.cn)
+
+          [关于我与联系方式](about/)
     # 中文可选菜单
     menu:
       main:
@@ -91,14 +65,6 @@ languages:
 #          name: 首页
 #          pageRef: /
 #          weight: 10
-        - identifier: posts
-          name: 文章
-          pageRef: /posts/
-          weight: 20
-        - identifier: research
-          name: 科研
-          pageRef: /research/
-          weight: 30
         - identifier: publications
           name: 论文
           pageRef: /pubs/
@@ -119,10 +85,14 @@ languages:
     params:
       homeInfoParams:
         # 英文首页标题 # (填写) 
-        Title: "姓名 / Your Name"
+        Title: "连慧婕 / Huijie Lian"
         # 英文首页自我介绍，markdown格式 # (填写) 
         Content: |
-          (Example 2) I am a professor of economics at the University of California, Santa Cruz. I work primarily on economic slack—which includes unemployed workers, unsold goods and services, and idle capacity. I research why slack prevails in almost all markets, why it fluctuates over the business cycle, and how macroeconomic policies should respond to such fluctuations. 
+          I am a second-year PhD student in the School of Physics at Southeast University. I began my doctoral studies in September 2025.
+
+          Email: [230259170@seu.edu.cn](mailto:230259170@seu.edu.cn)
+
+          [About me and contact details](about/)
     # 英文可选菜单
     menu:
       main:
@@ -130,14 +100,6 @@ languages:
 #          name: Home
 #          pageRef: /
 #          weight: 10
-        - identifier: posts
-          name: Posts
-          pageRef: /posts/
-          weight: 20
-        - identifier: research
-          name: Research
-          pageRef: /research/
-          weight: 30
         - identifier: publications
           name: Publications
           pageRef: /pubs/
@@ -150,3 +112,9 @@ languages:
           name: About
           pageRef: /about/
           weight: 60
+
+
+
+
+
+

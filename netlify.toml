@@ -1,14 +1,15 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify"
+command = "cd academic-site && npm ci && hugo --gc --minify --destination ../public"
 
 [build.environment]
-HUGO_VERSION = "0.161.1"
+HUGO_VERSION = "0.166.0"
+NODE_VERSION = "22"
 HUGO_ENV = "production"
 TZ = "Asia/Shanghai"
 
 [context.deploy-preview]
-command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL"
+command = "cd academic-site && npm ci && hugo --gc --minify --destination ../public --buildFuture -b $DEPLOY_PRIME_URL"
 
 [context.branch-deploy]
-command = "hugo --gc --minify -b $DEPLOY_PRIME_URL"
+command = "cd academic-site && npm ci && hugo --gc --minify --destination ../public -b $DEPLOY_PRIME_URL"

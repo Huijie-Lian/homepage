@@ -1,0 +1,34 @@
+zh:
+  label: 中文
+  locale: zh-CN
+  contentDir: content/zh
+  weight: 1
+  title: 连慧婕 | Huijie Lian
+  menus:
+    main:
+      - name: 首页
+        url: /zh/
+        weight: 10
+      - name: 论文
+        url: /zh/publications/
+        weight: 20
+      - name: 关于我
+        url: /zh/about/
+        weight: 30
+en:
+  label: English
+  locale: en-US
+  contentDir: content/en
+  weight: 2
+  title: Huijie Lian
+  menus:
+    main:
+      - name: Home
+        url: /en/
+        weight: 10
+      - name: Publications
+        url: /en/publications/
+        weight: 20
+      - name: About
+        url: /en/about/
+        weight: 30

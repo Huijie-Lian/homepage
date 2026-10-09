@@ -1,0 +1,62 @@
+/* Keep the supplied portrait in the requested 5:7 shape. */
+.resume-biography .avatar-wrapper {
+  width: 250px !important;
+  height: 350px !important;
+  max-width: 100%;
+}
+.resume-biography .avatar {
+  width: 250px !important;
+  height: 350px !important;
+  object-fit: cover;
+  object-position: 42% 42%;
+  border-radius: 12px;
+}
+.resume-biography .text-2xl.font-semibold { font-size: 1.125rem; line-height: 1.8; }
+html { scroll-behavior: smooth; }
+body { font-family: Inter, 'Noto Sans SC', 'Microsoft YaHei', sans-serif; }
+.academic-publication {
+  font-family: Arial, 'Noto Sans SC', 'Microsoft YaHei', sans-serif;
+  font-size: 18px;
+  line-height: 1.8;
+  padding: 24px 0;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e2e8f0;
+}
+.academic-publication-title {
+  font-family: inherit;
+  font-size: 23px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+.academic-publication-title a { text-decoration: none; color: #243c78; }
+.academic-publication-title a:hover { text-decoration: underline; }
+.academic-publication-authors { font-size: 18px; color: #475569; }
+.academic-publication-authors .font-bold { color: #1e293b; font-weight: 700; }
+.academic-publication-venue { font-size: 17px; margin: 8px 0 12px; color: #64748b; }
+.academic-publication-links a { font-size: 15px; }
+.academic-author-mark { font-size: 0.8em; margin-left: 2px; color: #4338ca; }
+.academic-author-legend { display: flex; flex-wrap: wrap; gap: 16px; margin: 6px 0 0; font-size: 14px; color: #64748b; }
+.academic-publication-detail .academic-publication-title { font-size: clamp(26px, 4vw, 36px); margin-bottom: 24px; }
+.academic-publication-detail .academic-publication-links { margin-top: 20px; }
+.dark .academic-author-mark { color: #a5b4fc; }
+.dark .academic-author-legend { color: #94a3b8; }
+.dark .academic-publication-title a { color: #a5b4fc; }
+.dark .academic-publication-authors,
+.dark .academic-publication-authors .font-bold { color: #e2e8f0; }
+.dark .academic-publication-venue { color: #94a3b8; }
+.hobby-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; margin: 28px 0; align-items: start; }
+.hobby-card { border: 1px solid #e2e8f0; border-radius: 12px; overflow: hidden; background: #fff; }
+.hobby-card h3 { font-family: inherit; margin: 0; padding: 18px; font-size: 19px; }
+.hobby-placeholder { min-height: 180px; display: flex; align-items: center; justify-content: center; background: #f8fafc; color: #94a3b8; font-size: 15px; }
+.hobby-photos { display: grid; gap: 8px; }
+.hobby-photos img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; object-position: center; margin: 0; }
+.dark .hobby-card { background: #1e293b; border-color: #334155; }
+.dark .hobby-placeholder { background: #0f172a; }
+@media (max-width: 900px) { .hobby-gallery { grid-template-columns: 1fr; } }
+@media (max-width: 767px) {
+  .resume-biography .avatar-wrapper, .resume-biography .avatar {
+    width: 200px !important;
+    height: 280px !important;
+  }
+}

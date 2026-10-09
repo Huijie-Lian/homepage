@@ -9,3 +9,21 @@ public/
 Thumbs.db
 *.swp
 
+
+# Local preview and build cache
+.preview-public/
+.hugo-cache/
+
+web-preview/
+offline-preview/
+.offline-preview.yaml
+
+.tools/
+.template-source/
+academic-template.zip
+academic-site/node_modules/
+academic-site/resources/
+academic-site/hugo_stats.json
+academic-site/.hugo_build.lock
+.academic-public/
+tmp/

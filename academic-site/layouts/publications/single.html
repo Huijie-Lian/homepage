@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="academic-publication-detail mx-auto max-w-6xl px-6 py-12 md:px-12">
+  <h1 class="academic-publication-title">{{ .Title }}</h1>
+  <div class="academic-publication-authors">{{ partial "page_metadata_authors" . }}</div>
+  {{ partial "publication_author_legend" . }}
+  {{ $pub := partial "functions/resolve_publication.html" . }}
+  <p class="academic-publication-venue">{{ with $pub.display_short }}{{ . | markdownify }}{{ end }} ({{ .Params.publication_year | default (.Date.Format "2006") }})</p>
+  <div class="academic-publication-links flex flex-wrap gap-3">{{ partial "page_links" (dict "page" . "is_list" 0) }}</div>
+  <div class="prose mt-8">{{ .Content }}</div>
+  <p class="mt-8"><a href="{{ with site.GetPage "/publications" }}{{ .RelPermalink }}{{ end }}">{{ if eq site.Language.Lang "zh" }}← 返回论文列表{{ else }}← All publications{{ end }}</a></p>
+</article>
+{{ end }}

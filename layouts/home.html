@@ -11,7 +11,7 @@
 
 {{- if $pubs }}
 <div class="post-content">
-  <h3>{{- if site.Params.ShowOnlySelectedPubs -}}Selected Publications{{- else -}}Publications{{- end -}}</h3>
+  <h3>{{- if eq .Lang "zh" -}}{{- if site.Params.ShowOnlySelectedPubs -}}代表论文{{- else -}}论文{{- end -}}{{- else -}}{{- if site.Params.ShowOnlySelectedPubs -}}Selected Publications{{- else -}}Publications{{- end -}}{{- end -}}</h3>
 </div>
 {{- range $pubs }}
   <article class="pub-entry">
@@ -40,3 +40,4 @@
 {{- end }}
 
 {{- end }}{{- /* end main */ -}}
+

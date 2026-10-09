@@ -1,46 +1,22 @@
 ---
-title: 'About'
-# description: "Desc Text."
-disableHLJS: true # to disable highlightjs
+title: '关于我'
 disableShare: true
-hideSummary: true
-searchHidden: false
-ShowReadingTime: false
-ShowBreadCrumbs: true
-ShowPostNavLinks: false
-ShowWordCount: false
-ShowRssButtonInSectionTermList: false
-UseHugoToc: true
-showToc: false
-TocOpen: false
-draft: false
 hidemeta: true
-comments: false
+showToc: false
 ---
 
-姓名
-: 申中
+东南大学物理学院博士二年级，2025年入校
 
-办公室
-: 田家炳楼北楼502
+## 教育经历
 
-Email
-: zshen@seu.edu.cn
-  
-详细自我介绍/近况/新闻/动态，最近在做什么，课题组…… 
+- 2025年9月至今：东南大学物理学院，博士研究生。
+- 2022—2025：河北师范大学，硕士研究生，凝聚态理论。
+- 2018—2022：河北师范大学，物理学，本科。
 
-总之这里可以写一两段话
+## 联系方式
 
-## Experience
+- 邮箱：[230259170@seu.edu.cn](mailto:230259170@seu.edu.cn)
+- 电话：[19831128936](tel:+8619831128936)
+- 通讯地址：东南大学九龙湖校区
 
-- 1933 - 1955 Professor, Institute for Advanced Study (Princeton).
-- 1914 - 1932 Member, Prussian Academy of Sciences; Professor, Humboldt University of Berlin.
-- 1912 - 1914 Professor, ETH Zurich.
-- 1909 - 1911 Professor, University of Zurich.
-- 1902 - 1909 Patent Examiner, Swiss Patent Office (Bern).
 
-## Selected Awards
-- 2025年10月获研究生至善奖学金(博士组)
-- 2025年5月获国家留学基金委公派博士生奖学金
-- 2025年5月获第八届江苏物理春季学术会议优秀口头报告
-- 2022年12月获硕士研究生国家奖学金

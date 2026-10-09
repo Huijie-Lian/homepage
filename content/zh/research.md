@@ -14,7 +14,7 @@ ShowRssButtonInSectionTermList: false
 UseHugoToc: true
 showToc: false
 TocOpen: false
-draft: false
+draft: true
 hidemeta: true
 comments: false
 ---

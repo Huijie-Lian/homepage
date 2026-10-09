@@ -1,0 +1,28 @@
+<div class="hobby-gallery">
+{{ range hugo.Data.hobbies }}
+  {{ $label := cond (eq $.Page.Lang "zh") .zh .en }}
+  {{ $folder := printf "images/hobbies/%s" .slug }}
+  {{ $files := slice }}
+  {{ if fileExists (printf "static/%s" $folder) }}
+    {{ range readDir (printf "static/%s" $folder) }}
+      {{ if and (not .IsDir) (in (slice ".jpg" ".jpeg" ".png" ".webp") (lower (path.Ext .Name))) }}
+        {{ $files = $files | append .Name }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  <section class="hobby-card" aria-label="{{ $label }}">
+    <h3><span aria-hidden="true">{{ .icon }}</span> {{ $label }}</h3>
+    {{ if $files }}
+      <div class="hobby-photos">
+      {{ range $files }}
+        <a href="{{ printf "%s/%s" $folder . | relURL }}" target="_blank" rel="noopener">
+          <img src="{{ printf "%s/%s" $folder . | relURL }}" alt="{{ $label }}" loading="lazy">
+        </a>
+      {{ end }}
+      </div>
+    {{ else }}
+      <div class="hobby-placeholder">{{ if eq $.Page.Lang "zh" }}照片待添加{{ else }}Photos coming soon{{ end }}</div>
+    {{ end }}
+  </section>
+{{ end }}
+</div>
