@@ -7,13 +7,13 @@ zh:
   menus:
     main:
       - name: 首页
-        url: /zh/
+        pageRef: /
         weight: 10
       - name: 论文
-        url: /zh/publications/
+        pageRef: /publications
         weight: 20
       - name: 关于我
-        url: /zh/about/
+        pageRef: /about
         weight: 30
 en:
   label: English
@@ -24,11 +24,11 @@ en:
   menus:
     main:
       - name: Home
-        url: /en/
+        pageRef: /
         weight: 10
       - name: Publications
-        url: /en/publications/
+        pageRef: /publications
         weight: 20
       - name: About
-        url: /en/about/
+        pageRef: /about
         weight: 30

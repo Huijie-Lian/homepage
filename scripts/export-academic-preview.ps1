@@ -13,14 +13,15 @@ foreach ($sourceFile in Get-ChildItem $sourceRoot -File -Recurse) {
 foreach ($file in Get-ChildItem $previewRoot -Filter *.html -Recurse) {
     $html = Get-Content -LiteralPath $file.FullName -Raw
     $relative = [IO.Path]::GetRelativePath($previewRoot, $file.FullName).Replace('\', '/')
-    $pageBase = [uri]('https://hjlian.netlify.app/' + $relative)
+    $pageBase = [uri]('https://huijie-lian.github.io/homepage/' + $relative)
     $html = [regex]::Replace($html, '(?<attr>href|src)=(?:"(?<url>[^"]*)"|(?<url>[^\s>]+))', {
         param($match)
         $url = $match.Groups['url'].Value
         if ($url.StartsWith('#') -or $url -match '^(mailto:|tel:|data:|javascript:)') { return $match.Value }
         try { $uri = [uri]::new($pageBase, $url) } catch { return $match.Value }
-        if ($uri.Host -notin @('hjlian.netlify.app', 'localhost', '127.0.0.1')) { return $match.Value }
+        if ($uri.Host -notin @('huijie-lian.github.io', 'hjlian.netlify.app', 'localhost', '127.0.0.1')) { return $match.Value }
         $path = [uri]::UnescapeDataString($uri.AbsolutePath.TrimStart('/'))
+        if ($path.StartsWith('homepage/')) { $path = $path.Substring(9) }
         if ($path.EndsWith('/') -or -not $path) { $path += 'index.html' }
         $link = [IO.Path]::GetRelativePath($file.DirectoryName, (Join-Path $previewRoot $path)).Replace('\', '/')
         return $match.Groups['attr'].Value + '="' + $link + $uri.Fragment + '"'

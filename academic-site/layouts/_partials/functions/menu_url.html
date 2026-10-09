@@ -1,0 +1,10 @@
+{{/* Page permalinks already include the deployment subdirectory and language. */}}
+{{- $url := .URL -}}
+{{- with .Page -}}
+  {{- $url = .RelPermalink -}}
+{{- else -}}
+  {{- if not (or (hasPrefix $url "#") (hasPrefix $url "http://") (hasPrefix $url "https://")) -}}
+    {{- $url = $url | relLangURL -}}
+  {{- end -}}
+{{- end -}}
+{{- return $url -}}

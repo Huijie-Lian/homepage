@@ -6,7 +6,7 @@
 # Website name (set in params.yaml under hugoblox.branding.name)
 title: Huijie Lian
 # Website URL
-baseURL: 'https://hjlian.netlify.app/'
+baseURL: 'https://huijie-lian.github.io/homepage/'
 
 ############################
 ## LANGUAGE
